@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root { --background:#f6f8f5; --foreground:#153331; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--background); color:var(--foreground); font-family:Arial, Helvetica, sans-serif; }
+button, a { cursor:pointer; }
+button:focus-visible, a:focus-visible { outline:3px solid #d7e95c; outline-offset:3px; }
+.hero-grid { background-image:linear-gradient(rgba(23,57,53,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(23,57,53,.04) 1px,transparent 1px); background-size:42px 42px; mask-image:linear-gradient(to bottom,black,transparent 85%); }
+.panel { border:1px solid #dbe4de; border-radius:1rem; background:#fff; padding:1.25rem; box-shadow:0 2px 4px rgba(24,52,48,.025); }
+.panel-head { display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; margin-bottom:1.25rem; }
+.panel-head h3 { margin-top:.25rem; font-size:1.25rem; font-weight:700; letter-spacing:-.02em; }
+.eyebrow { color:#7d902b; font-size:.7rem; line-height:1rem; font-weight:800; text-transform:uppercase; letter-spacing:.15em; }
+.icon-btn { display:grid; min-width:2.5rem; height:2.5rem; place-items:center; border:1px solid #d9e2dc; border-radius:.7rem; background:#fff; color:#48605a; transition:.2s; }
+.icon-btn:hover { background:#f0f4ef; }
+.verified-pill { display:flex; align-items:center; gap:.3rem; border-radius:99px; background:#edf3ce; padding:.4rem .65rem; color:#647523; font-size:.7rem; font-weight:800; white-space:nowrap; }
+@media (max-width:640px){.panel{padding:1rem}}

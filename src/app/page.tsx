@@ -341,38 +341,12 @@ export default function Home() {
             ),
       );
     } catch {
-      const fallback: JobAnalysis = {
-        source: "demo",
-        jobTitle: job.title,
-        company: job.company,
-        location: job.location,
-        requiredExperience: "5+ years site experience",
-        requiredSkills: job.matched,
-        certifications: job.missing.filter((item) =>
-          /certification/i.test(item),
-        ),
-        matchedRequirements: job.matched,
-        partiallyMatchedRequirements: [],
-        missingRequirements: job.missing,
-        scoreBreakdown: [
-          { category: "Experience", earned: 14, possible: 14 },
-          { category: "Education", earned: 12, possible: 12 },
-          { category: "Certifications", earned: 3, possible: 3 },
-          { category: "Technical skills", earned: 10, possible: 10 },
-          { category: "Management responsibilities", earned: 8, possible: 8 },
-          { category: "Location and work eligibility", earned: 6, possible: 6 },
-          { category: "Language", earned: 0, possible: 0 },
-        ],
-        overallMatchScore: job.score,
-        recommendation:
-          job.score >= 85 ? "Apply" : job.score >= 70 ? "Review" : "Skip",
-      };
-      setAiAnalysis(fallback);
+      setAiAnalysis(null);
       setAnalysisNotice(
         l(
           ar,
-          "Demo Analysis — live AI failed, so CareerPilot is showing the local demo match.",
-          "تحليل تجريبي — تعذر الذكاء الاصطناعي المباشر، لذا يعرض CareerPilot نتيجة العرض المحلية.",
+          "Analysis is temporarily unavailable. Your pasted description was not replaced with unrelated demo data.",
+          "التحليل غير متاح مؤقتًا. لم يتم استبدال وصف الوظيفة الذي ألصقته ببيانات تجريبية غير مرتبطة.",
         ),
       );
     } finally {

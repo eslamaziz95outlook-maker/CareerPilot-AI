@@ -1,0 +1,27 @@
+name: Feature request
+description: Propose an improvement to CareerPilot AI
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What user problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach
+    validations:
+      required: true
+  - type: checkboxes
+    id: grounding
+    attributes:
+      label: Evidence and privacy check
+      options:
+        - label: This proposal does not require fabricating candidate qualifications.
+          required: true
+        - label: I have described any new handling of personal or document data.
+          required: true
